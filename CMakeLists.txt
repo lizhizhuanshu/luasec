@@ -5,6 +5,8 @@ aux_source_directory(./src DIR_SRCS)
 
 
 option(LUA_SEC_STATIC "build static library" OFF)
+list(REMOVE_ITEM DIR_SRCS "./src/luasocket/wsocket.c")
+include_directories(./src)
 if(LUA_SEC_STATIC)
     add_library(${PROJECT_NAME} STATIC ${DIR_SRCS})
 else()
