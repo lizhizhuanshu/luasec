@@ -35,7 +35,7 @@ typedef struct t_ssl_ {
   int error;
 } t_ssl;
 typedef t_ssl* p_ssl;
-
+LSEC_API int luaopen_ssl_config(lua_State *L);
 LSEC_API int luaopen_ssl_core(lua_State *L);
 
 #endif
